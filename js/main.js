@@ -13,36 +13,17 @@ function getCardUsers(data) {
     <div class="col-4 mb-2 nematullo">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-name">${data.name}</h2>
-          <h3 class="card-text">
-          ${data.username}
-          </h3>
-          <span class="card-email">${data.email}</span> <br>
-          <div class="card-address mt-2">
-          <li>${data.address.street}</li>
-          <li>${data.address.suite}</li>
-          <li>${data.address.city}</li>
-          <li>${data.address.zipcode}</li>
-          </div>
-          <div class="card-location mt-2">
-          <span>${data.address.geo.lat}</span>
-          <span>${data.address.geo.lng}</span>
-          </div>
-          <div class="card-common">
-            <span class="card-phone">${data.phone}</span>
-            <a class="card-link">${data.website}</a>
-          </div>
-          <div class="card-company mt-2">
-            <h4>${data.company.name}</h4>
-            <p>${data.company.catchPhrase}</p>
-            <span>${data.company.bs}</span>
-          </div>
-          <div class="card-links">
-            <a href="todo.html" onclick="saveId(${data.id})" class="btn btn-info">Go todo</a>
-            <a href="posts.html" onclick="saveId(${data.id})" class="btn btn-info">Go posts</a>
-            <a href="album.html" onclick="saveId(${data.id})" class="btn btn-info">Go albom</a>
-          </div>
+          <a href="${data.flags.png}"><img style="width: 100%; height: 200px; margin-bottom: 20px;" src="${data.flags.png}" alt=""></a>          
+          <h3 style="margin-bottom: 30px; class="card-text"> ${data.name.common} </h3>
+          <h5 style="margin-bottom: 15px; class="card-text"> sepellin: ${data.capital} </h5>
+          <h5 style="margin-bottom: 15px; class="card-text"> Area: ${data.area} </h5>
+          <h5 style="margin-bottom: 15px; class="card-text"> Region: ${data.region} </h5>
+          <h5 style="margin-bottom: 15px; class="card-text"> Population: ${data.population} </h5>
+          <p class="card-text nonee"> Cars: ${data.car.signs} </p>
+          <p class="card-text nonee"> Population: ${data.translations.ara.official} </p>
+          <p class="card-text nonee"> Status: ${data.status} </p>
         </div>
+      </div>
       </div>
     </div>
   `;
@@ -54,7 +35,7 @@ function saveId(id) {
 
 async function getData() {
   // usersRow.innerHTML = "...loading";
-  let res = await fetch(`https://jsonplaceholder.typicode.com/users`);
+  let res = await fetch(`https://restcountries.com/v3.1/all`);
   let data = await res.json();
   usersRow.innerHTML = "";
   data.forEach((users) => {
