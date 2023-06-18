@@ -1,0 +1,67 @@
+.users-row {
+  .card {
+    .card-body {
+      .card-email {
+        text-decoration: underline;
+        color: blue;
+        cursor: pointer;
+      }
+      .card-address {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        li {
+          list-style-type: none;
+          padding-bottom: 10px;
+          color: crimson;
+        }
+      }
+      .card-location {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        span {
+          padding-bottom: 10px;
+          color: aquamarine;
+        }
+      }
+      .card-common {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .card-phone {
+          display: inline-block;
+          padding-bottom: 10px;
+          color: blue;
+        }
+        .card-link {
+          color: coral;
+        }
+      }
+      .card-company {
+        span {
+          display: inline-block;
+          padding-bottom: 10px;
+        }
+      }
+      .card-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+    }
+  }
+}
+
+.card {
+  .card-body {
+    .img11 {
+      text-align: center;
+      .img12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
